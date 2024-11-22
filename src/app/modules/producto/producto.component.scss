@@ -1,0 +1,28 @@
+.responsive-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Para pantallas grandes */
+  @media (min-width: 1024px) {
+    .responsive-image {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Para pantallas medianas */
+  @media (max-width: 1024px) and (min-width: 600px) {
+    .responsive-image {
+      width: 100%;
+    }
+  }
+  
+  /* Para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .responsive-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+ 

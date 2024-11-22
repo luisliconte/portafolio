@@ -1,0 +1,81 @@
+<h2 mat-dialog-title>Registro de producto</h2>
+<hr>
+<mat-dialog-content>
+
+    <div class="book-form-container">
+        <form [formGroup]="bookForm">
+            <div class="row">
+                <mat-form-field appearance="fill" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-label>Title</mat-label>
+                    <input matInput formControlName="title">
+                    @if (bookForm.get("title")?.invalid && bookForm.get("title")?.touched){
+                    @if (bookForm.get("title")?.hasError("required")){
+                    <span class="error-message"> El título es obligatorio y debe tener al menos 3 caracteres.</span>
+                    }
+                    }
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-label>Original Title</mat-label>
+                    <input matInput formControlName="originalTitle">
+                    @if (bookForm.get("originalTitle")?.invalid && bookForm.get("originalTitle")?.touched){
+                    @if (bookForm.get("originalTitle")?.hasError("required")){
+                    <span class="error-message"> El título original es obligatorio y debe tener al menos 3
+                        caracteres.</span>
+                    }
+                    }
+
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-label>Release Date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="releaseDate" />
+                    <mat-datepicker #picker></mat-datepicker>
+                    @if (bookForm.get("releaseDate")?.invalid && bookForm.get("releaseDate")?.touched){
+                    @if (bookForm.get("releaseDate")?.hasError("required")){
+                    <span class="error-message"> La fecha de lanzamiento es obligatoria.</span>
+                    }
+                    }
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-label>Pages</mat-label>
+                    <input matInput formControlName="pages" type="number">
+                    @if (bookForm.get("pages")?.invalid && bookForm.get("pages")?.touched){
+                    @if (bookForm.get("pages")?.hasError("required")){
+                    <span class="error-message"> El número de páginas es obligatorio y debe ser mayor que 0.</span>
+                    }
+                    }
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-label>Cover URL</mat-label>
+                    <input matInput formControlName="cover">
+                    @if (bookForm.get("cover")?.invalid && bookForm.get("cover")?.touched){
+                    @if (bookForm.get("cover")?.hasError("required")){
+                    <span class="error-message"> La URL de la portada es obligatoria.</span>
+                    }
+                    }
+                </mat-form-field>
+
+
+                <mat-form-field appearance="fill" class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput formControlName="description"></textarea>
+                    @if (bookForm.get("description")?.invalid && bookForm.get("description")?.touched){
+                    @if (bookForm.get("description")?.hasError("required")){
+                    <span class="error-message"> La descripción es obligatoria y debe tener al menos 10
+                        caracteres.</span>
+                    }
+                    }
+                </mat-form-field>
+            </div>
+
+            <mat-dialog-actions>
+                <button mat-button (click)="onNoClick()">Cancelar</button>
+                <button mat-button [mat-dialog-close]="this.bookForm.value" [disabled]="bookForm.invalid"
+                    cdkFocusInitial>Guardar</button>
+            </mat-dialog-actions>
+        </form>
+    </div>
+</mat-dialog-content>
