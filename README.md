@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
+# Dejo algunas URL para añadirla en campo cover url:
+https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/arthur_weasley.png
+https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/neville_longbottom.png
+https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/luna_lovegood.png
+https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/harry_potter.png
+
+# Para iniciar el proyecto primero debe de descargar las dependencia usando el siguiente comando:
+npm install
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

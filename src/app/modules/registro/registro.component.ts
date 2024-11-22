@@ -26,14 +26,14 @@ export class RegistroComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<RegistroComponent>,
     private fb: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public data: IBooks) {}
+    @Inject(MAT_DIALOG_DATA) public data: IBooks) { }
 
   ngOnInit(): void {
     this.initForm();
     this.editBook(this.data);
   }
 
-  initForm(){
+  initForm() {
     this.bookForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(3)]],
       originalTitle: ['', [Validators.required, Validators.minLength(3)]],
@@ -43,7 +43,7 @@ export class RegistroComponent implements OnInit {
       cover: ['', [Validators.required]],
     });
   }
-  
+
   get f() { return this.bookForm.controls; }
 
   onNoClick(): void {
