@@ -8,7 +8,7 @@ https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/charact
 https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/luna_lovegood.png
 https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/characters/harry_potter.png
 
-# Para iniciar el proyecto primero debe de descargar las dependencia usando el siguiente comando:
+# Para iniciar el proyecto primero debe descargar las dependencia usando el siguiente comando:
 npm install
 
 ## Development server
