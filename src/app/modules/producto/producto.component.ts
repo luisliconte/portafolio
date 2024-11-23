@@ -49,8 +49,8 @@ export class ProductoComponent implements OnInit, AfterViewInit {
   openDialog(books: IBooks | null): void {
     const valueBook = books ? books : null;
     const dialogRef = this.dialog.open(RegistroComponent, {
-      minWidth: '600px',
-      maxWidth: '1000px',
+      minWidth: '80%',
+      maxWidth: '100%',
       height: 'auto',
       data: valueBook,
     });
